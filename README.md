@@ -23,3 +23,12 @@ So there are  319950  pixels total in this image. <br/>
 <br/>Divide total bytes by 8 to see how many characters we can fit in this image. 
 <br/>RBG Pixels divided by 8 =  119981.25 
 <br/>---but remember this is all of the pixels, not just the color ones we will use.
+
+
+We open up the text file that we have in this directory.
+<br/> This will have the information about the pixels of this original photo.
+===========================
+x, y = (314, 200)
+R = 253            G = 253            B = 253
+R = 11111101        G = 11111101    B = 11111101
+===========================

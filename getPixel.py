@@ -110,7 +110,7 @@ print("So we have ", (width * height * 3), " bytes from pixles that are RBG sets
 # =============================================================
 # =============================================================
 # =============================================================
-file = open("copy.txt", "w")        # Creating/opening a txt file, and allow it to be written
+file = open("originalPixels.txt", "w")        # Creating/opening a txt file, and allow it to be written
 #   We are starting a double for loop
 #   Row 1   --> pixel1, pixel2, pixel3.....
 #   Row 2   --> .......
