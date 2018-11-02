@@ -49,7 +49,7 @@ def convert_grayscale(image):
 #   Make sure to bring the actual image into the project folder.
 #       Though you could open via a directory.
 #   Note 'img' is our simple made-up title. Not mandatory for an image
-img = Image.open("/Users/nct/Dropbox/ComputerScience/PycharmProjects/CryptoSteganography/OriginalPhotos/Fox_original.jpg")
+img = Image.open("/Users/nct/Dropbox/ComputerScience/PycharmProjects/CryptoSteganography/CryptoSteganography/OriginalPhotos/Fox_original.jpg")
 
 img = img.convert('RGB')
 # We want to count how many pixels are not white, black, or almost white
@@ -171,8 +171,8 @@ for y in range(0, height): #each pixel has coordinates
 
         # ===============if RGB - start=============================================
         # We do not want to change or acknowledge:
-        #   White Pixels
-        #   Black pixels
+        #   White Pixels 255
+        #   Black pixels 0
         #   Pixles 1 from White --> add 1 would make White
         if (R != 255 or G != 255 or B != 255) and \
             (R != 254 or G != 254 or B != 254) and \
@@ -205,6 +205,7 @@ for y in range(0, height): #each pixel has coordinates
             #       There are just too many pixels to display in pycharm
             #       This is ony the non-white pixels, and it is still to many to display in pycharm
             #       Currently I am using a simple fox image, so it will be extreme on large, detailed photos.
+            '''
             print("===========================")
             print("x, y = (",x, ", ", y, ")")
             print("R = ", R, "\t\tG = ", G, "\t\tB = ", B)
@@ -215,7 +216,7 @@ for y in range(0, height): #each pixel has coordinates
             print("len R = " + str(len(bin_R4)))
             print("len G = " + str(len(bin_G4)))
             print("len B = " + str(len(bin_B4)) + "\n")
-
+            '''
             workingPXLs += 1
             #print("workingPXLs = " + str(workingPXLs))
             # =============================================================
@@ -232,7 +233,7 @@ for y in range(0, height): #each pixel has coordinates
                         "\n\t   R = " + str(bin_R4) + "\t\tG = " + str(bin_G4) + "\tB = " + str(bin_B4))
 
 
-save_image(new, 'changed_image.png')
+save_image(new, 'StegoPhotos/changed_image.png')
         # ===============if RGB - end=================================
     # =============for x - end============================================
 # =================for y - end============================================

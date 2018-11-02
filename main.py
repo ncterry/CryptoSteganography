@@ -2,8 +2,8 @@
 
 
 #from subFunctions import open_image, save_image, create_image, get_pixel
-from a_grayScale import convert_grayscale
-from aaaa_primaryColors import convert_primary
+#rom a_grayScale import convert_grayscale
+#from aaaa_primaryColors import convert_primary
 from tkinter import *
 from Classes import Steganography
 
