@@ -24,8 +24,10 @@ So there are  319950  pixels total in this image. <br/>
 <br/>RBG Pixels divided by 8 =  119981.25 
 <br/>---but remember this is all of the pixels, not just the color ones we will use.
 
+
+
 <br/><br/> We open up the text file, originalPixels.txt
 <br/> We will be writing the details of the pixels from the original photo:
-<br/><br/><br/>x, y = (317, 203)
-<br/><br/><br/>R = 251            G = 251            B = 251
-<br/><br/><br/>R = 11111011        G = 11111011    B = 11111011
+x, y = (317, 203)
+R = 251            G = 251            B = 251
+R = 11111011        G = 11111011    B = 11111011
