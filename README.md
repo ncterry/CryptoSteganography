@@ -28,6 +28,7 @@ So there are  319950  pixels total in this image. <br/>
 
 <br/><br/> We open up the text file, originalPixels.txt
 <br/> We will be writing the details of the pixels from the original photo:
-x, y = (317, 203)
-R = 251            G = 251            B = 251
-R = 11111011        G = 11111011    B = 11111011
+
+    x, y = (317, 203)
+    R = 251            G = 251            B = 251
+    R = 11111011        G = 11111011    B = 11111011
