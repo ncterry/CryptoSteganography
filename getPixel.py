@@ -5,42 +5,8 @@
 #   Search Pillow (if you have it installed on your computer)
 #   Import Pillow to project
 #   Now we can incorporate it into our project with:
-from PIL import Image
+from Functions import *
 
-
-# Imported PIL Library from PIL import Image
-
-# Open an Image
-def open_image(path):
-  newImage = Image.open(path)
-  return newImage
-
-# Save Image
-def save_image(image, path):
-  image.save(path, 'png')
-
-
-# Create a new image with the given size
-def create_image(i, j):
-  image = Image.new("RGB", (i, j), "white")
-  return image
-
-
-# Get the pixel from the given image
-def get_pixel(image, i, j):
-  # Inside image bounds?
-  width, height = image.size
-  if i > width or j > height:
-    return None
-
-  # Get Pixel
-  pixel = image.getpixel((i, j))
-  return pixel
-
-# Create a Grayscale version of the image
-def convert_grayscale(image):
-  # Get size
-  width, height = image.size
 
 
 
@@ -126,6 +92,8 @@ for y in range(0, height): #each pixel has coordinates
     # =============for x - start============================================
     for x in range(0, width):
 
+        # we take pixel x,y from the original image
+        # Send that to function, and return the RBG details of that pixel
         pixel = get_pixel(img, x, y)
         R = pixel[0]
         G = pixel[1]

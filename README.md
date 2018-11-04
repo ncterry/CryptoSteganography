@@ -32,3 +32,7 @@ So there are  319950  pixels total in this image. <br/>
     x, y = (317, 203)
     R = 251            G = 251            B = 251
     R = 11111011        G = 11111011    B = 11111011
+
+<br/> We will be saving a new image, once we chage, so we create a new image 
+<br/> From the original image, we cycle through every pixel, rowXcolumn, and get the RGB details from each pixel.
+
