@@ -171,7 +171,7 @@ for y in range(0, height): #each pixel has coordinates
             # This prints too many pixels for pycharm.
             #       The program works, but we cant see all the results here.
             #       There are just too many pixels to display in pycharm
-            #       This is ony the non-white pixels, and it is still to many to display in pycharm
+            #       This is only the non-white pixels, and it is still to many to display in pycharm
             #       Currently I am using a simple fox image, so it will be extreme on large, detailed photos.
             '''
             print("===========================")
@@ -186,6 +186,7 @@ for y in range(0, height): #each pixel has coordinates
             print("len B = " + str(len(bin_B4)) + "\n")
             '''
             workingPXLs += 1
+            '''
             #print("workingPXLs = " + str(workingPXLs))
             # =============================================================
             # The print functions above work, but pycharm can display 300k pixel values.
@@ -195,6 +196,7 @@ for y in range(0, height): #each pixel has coordinates
             #       Include our standard strings
             #       Don't separate standard strings, and variable with a comma here, use a +
             #       We are 'adding' more parts to our single string that is being written to file.
+            '''
             file.write( "\n     ==========================="
                         "\n     x, y = (" + str(x) + ", " + str(y) + ")"
                         "\n\t   R = " + str(R) + "\t\t\tG = " + str(G) + "\t\t\tB = " + str(B) +
@@ -202,6 +204,8 @@ for y in range(0, height): #each pixel has coordinates
 
 
 save_image(new, 'StegoPhotos/changed_image.png')
+
+'''
         # ===============if RGB - end=================================
     # =============for x - end============================================
 # =================for y - end============================================
@@ -224,7 +228,7 @@ save_image(new, 'StegoPhotos/changed_image.png')
             #          ===========================
             #break # note - break is just here to have a result in our if statement
             # Since we are writing to file in the if statement, we don't need a break
-
+'''
 # =============================================================
 # =============================================================
 # =============================================================

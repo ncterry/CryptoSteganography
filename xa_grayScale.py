@@ -1,4 +1,4 @@
-from subFunctions import create_image, get_pixel
+from Functions import create_image, get_pixel
 
 
 # Create a Grayscale version of the image

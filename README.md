@@ -1,6 +1,27 @@
 # CryptoSteganography
 Encrypted messaged that is embedded in a photo using the Least Significant Bit in the RBG-pixels
 
+
+
+1) get a picture
+2) pixel map that picture
+3) remove the white(255) (254) and black(0)
+4) make sure to check all value fo RBG
+5) check how many working RGB pixels we have
+6) get a message
+7) encrypt the message
+8) make sure the encrypted message can fit in the RGB pixels
+9) embed using Least Significant byte 0000 0001 on working RGB pixels
+
+
+
+
+
+
+
+
+
+
 Initially:
 The program basics are run through the getPixel.py file. 
 We open an original image (currently just set to the fox.jpg)
