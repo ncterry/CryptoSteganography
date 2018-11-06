@@ -143,74 +143,54 @@ def embeddSimpleMessage():
 
 
 
-    print("\n\neightBinaryDigit[0][0] = ")
+    print("\n\nlenPoundMessage_eightDigitBinary[0][0] = ")
     print(lenPoundMessage_eightDigitBinary[0][0])
-    '''
-    lenPoundMessage_eightDigitBinary[0][0] = 0      first bin value for first char of lenth
-    '''
+
+    #lenPoundMessage_eightDigitBinary[0][0] = 0      first bin value for first char of lenth
+
     print("\n\nlenPoundMessage_eightDigitBinary[0][2] = ")
     print(lenPoundMessage_eightDigitBinary[0][2])
+
+    #lenPoundMessage_eightDigitBinary[0][2] = 1      third bin value for N
+
     '''
-    lenPoundMessage_eightDigitBinary[0][2] = 1      third bin value for N
-    '''
-
-
-
-    HERE
-    WE HAVE A BINARY ARRAY WITH LENGTH OF ARRAY + ##### + MESSAGE
-    WE NEED TO GO THROUGH BIT BY BIT AND EMBED
-    WE NEED TO ONLY PLACE IN OUR WORKING PIXELS
-    IN A WORKING PIXEL WE PLACE IN RGB
-    WE NEED TO CYCLE OUR CHAR 0-7 SINCE IT IS EIGHT BITS
-    WE NEED TO CYCLE OUR LIST BASED ON THE LENGTH OF THE LIST
-    '''
-    Now we have the length + ##### + message, all in one, 'lenPoundMessage_eightDigitBinary'
+    Remember this is inside of the Not(White, White-1, Black)
     
-    len(lenPoundMessage_eightDigitBinary[0]) is just for 'N', and is 8
-    Now we need to run a double for loop
-        The length of the lenPoundMessage_eightDigitBinary array
-            8 for each binary rep of each char in the array
-            
-    
-    
-    
-    
-    # =================for y - start============================================
-    for y in range(0, height):  # each pixel has coordinates
-        row = ""
-        # =============for x - start============================================
-        for x in range(0, width):
-        
-                    [x][y] 
-    Working pixel   [0][0]
-        RGB
-                                        [i][j]
-        lenPoundMessage_eightDigitBinary[0][0] for R
-        lenPoundMessage_eightDigitBinary[0][1] for G
-        lenPoundMessage_eightDigitBinary[0][2] for B
-    Working pixel [0][1]
-        RGB
-        lenPoundMessage_eightDigitBinary[0][3] for R
-        lenPoundMessage_eightDigitBinary[0][4] for G
-        lenPoundMessage_eightDigitBinary[0][5] for B
-    Working pixel [0][2]
-        RGB
-        lenPoundMessage_eightDigitBinary[0][6] for R
-        lenPoundMessage_eightDigitBinary[0][7] for G
-        lenPoundMessage_eightDigitBinary[0][5] for B
-    '''
+     Now we have the (length + ##### + message), all in one, 'lenPoundMessage_eightDigitBinary'
 
+     len(lenPoundMessage_eightDigitBinary[0]) is just for 'N', and is 8
+     Now we need to run a double for loop
+         The length of the lenPoundMessage_eightDigitBinary array
+             8 for each binary rep of each char in the array
 
+    Create a var outside of for loops to account for next lenPoundMessage_eightDigitBinary
+    eightDigitBinary_lengthPosition = 0     #length of lenPoundMessage_eightDigitBinary
+    binaryPosition = 0                      # =7 so we can do 8bits, 0-7
 
+     # =================for y - start============================================
+     for y in range(0, height):  # each pixel has coordinates
+         row = ""
+         # =============for x - start============================================
+         for x in range(0, width):
 
+                     [x][y] 
+     Working pixel   [0][0]
+         #RGB
+         
+         lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition] #for R
+         binaryPosition += 1
+         lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition] #for G
+         binaryPosition += 1
+         lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition] #for B
+         binaryPosition += 1
+         if binaryPosition = 7:
+            eightDigitBinary_lengthPosition += 1
+            binaryPosition = 0
+         
 
-
-
-
-
-
-
-
+     '''
+    eightDigitBinary_lengthPosition = 0  # length of lenPoundMessage_eightDigitBinary
+    binaryPosition = 0  # =7 so we can do 8bits, 0-7
 
     from globals import workingPXLs
     # Create new Image and a Pixel Map
@@ -265,6 +245,15 @@ def embeddSimpleMessage():
             # We are in our for loops to cycle through each line of pixels one-by-one
             # If we hit any pixel that is not solid white, 255x255x255 then we will print the pixel details.
 
+
+
+            seems like we are changing and embedding LSB pixels
+            but the blacks are changing, that is noticable
+            need to be careful on dark pixels
+
+
+
+
             # ===============if RGB - start=============================================
             # We do not want to change or acknowledge:
             #   White Pixels 255
@@ -274,17 +263,48 @@ def embeddSimpleMessage():
             if (R != 255 or G != 255 or B != 255) and \
                     (R != 254 or G != 254 or B != 254) and \
                     (R != 0 or G != 0 or B != 0):
-            # The original change....works
-            # Change the RBG values
-                #reduce = (R * 0.25) + (G * 0.25) + (B * 0.25)
+                '''    
+                # The original change....works
+                # Change the RBG values
+                    #reduce = (R * 0.25) + (G * 0.25) + (B * 0.25)
+    
+                # Set Pixel in new image
+                #   We care have taken all pixels (RBG) down to .25 of what they where.
+                #   This is basically making the image look black and whte
+                    #pixels[x, y] = (int(reduce), int(reduce), int(reduce))
+                '''
+                #pixels[x, y] = (int(R), int(G), int(B)) # this isnt doing anything, keeps the orginal photo
+                # ---------------------------
+                # Remember we are changing the last bit on R, G, B
+                # ---------------------------
+                if eightDigitBinary_lengthPosition < len(lenPoundMessage_eightDigitBinary):
+                    R = changeANDconvertR(R, bin_R4, lenPoundMessage_eightDigitBinary, eightDigitBinary_lengthPosition, binaryPosition)
+                    print("binaryPosition spot 1 = " + str(binaryPosition))
+                    binaryPosition += 1
+                    if binaryPosition == 8: # Can't do 8
+                        eightDigitBinary_lengthPosition += 1
+                        binaryPosition = 0
 
-            # Set Pixel in new image
-            #   We care have taken all pixels (RBG) down to .25 of what they where.
-            #   This is basically making the image look black and whte
-                #pixels[x, y] = (int(reduce), int(reduce), int(reduce))
-                pixels[x, y] = (int(R), int(G), int(B)) # this isnt doing anything, keeps the orginal photo
+                    # ---------------------------
+                if eightDigitBinary_lengthPosition < len(lenPoundMessage_eightDigitBinary):
+                    G = changeANDconvertG(G, bin_G4, lenPoundMessage_eightDigitBinary, eightDigitBinary_lengthPosition, binaryPosition)
+                    print("binaryPosition spot 2 = " + str(binaryPosition))
+                    binaryPosition += 1
+                    if binaryPosition == 8: # Can't do 8
+                        eightDigitBinary_lengthPosition += 1
+                        binaryPosition = 0
 
+                    # ---------------------------
+                if eightDigitBinary_lengthPosition < len(lenPoundMessage_eightDigitBinary):
+                    B = changeANDconvertB(B, bin_B4, lenPoundMessage_eightDigitBinary, eightDigitBinary_lengthPosition, binaryPosition)
+                    print("binaryPosition spot 3 = " + str(binaryPosition))
+                    binaryPosition += 1
+
+                    if binaryPosition == 8: # Can't do 8
+                        eightDigitBinary_lengthPosition += 1
+                        binaryPosition = 0
             # --------------Original works---------------------------
+                pixels[x, y] = (int(R), int(G), int(B)) # after the RBG change
 
                 # This prints too many pixels for pycharm.
                 #       The program works, but we cant see all the results here.

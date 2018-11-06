@@ -44,6 +44,7 @@ if __name__ == "__main__":
 
 
     img2 = embeddSimpleMessage()
+    print("make it here???")
     img2.show()
 
 

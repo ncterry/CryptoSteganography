@@ -147,16 +147,59 @@ def convertBinarytoDisplay8digits(initialBin):
     # ==================================================
 # ==================================================
 # ==================================================
+def changeANDconvertR(R, bin_R4, lenPoundMessage_eightDigitBinary, eightDigitBinary_lengthPosition, binaryPosition):
+    # ---------------------------
+    print("\n\ninitial R =  " + str(R))
+    print("initial bin_R4[7] = " + str(bin_R4[7]))
+    print("bin_R4[7] type is: " + str(type(bin_R4[7])))
+    print("lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition] = " +
+          str(lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition]))
+    # bin_R4 represents binary, but is a string ex."01010101"
+    # Strings are immutable. It cannot be changed.
+    # We need to create a list, based on the bin_R4
+    # Change the last value in the bin_R4_list
+    # Then we can re-create the bin_R4 string, from that list
+    bin_R4_list = list(bin_R4)
+    bin_R4_list[7] = str(lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition])  # for R
+    bin_R4 = ''.join(bin_R4_list)
+    print("Post bin_R4[7] = " + str(bin_R4[7]))
+    R = int(bin_R4, 2)
+    print("Post R =  " + str(R))
+    return R
 
-
 # ==================================================
 # ==================================================
 # ==================================================
-
+def changeANDconvertG(G, bin_G4, lenPoundMessage_eightDigitBinary, eightDigitBinary_lengthPosition, binaryPosition):
+    print("\n\ninitial G =  " + str(G))
+    print("initial bin_G4[7] = " + str(bin_G4[7]))
+    print("bin_G4[7] type is: " + str(type(bin_G4[7])))
+    print("lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition] = " +
+          str(lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition]))
+    bin_G4_list = list(bin_G4)
+    bin_G4_list[7] = str(lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition])  # for G
+    bin_G4 = ''.join(bin_G4_list)
+    print("Post bin_G4[7] = " + str(bin_G4[7]))
+    G = int(bin_G4, 2)
+    print("Post G =  " + str(G))
+    return G
 # ==================================================
 # ==================================================
 # ==================================================
-
+def changeANDconvertB(B, bin_B4, lenPoundMessage_eightDigitBinary, eightDigitBinary_lengthPosition, binaryPosition):
+    print("\n\ninitial B =  " + str(B))
+    print("initial bin_B4[7] = " + str(bin_B4[7]))
+    print("bin_B4[7] type is: " + str(type(bin_B4[7])))
+    print("lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition] = " +
+          str(lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition]))
+    bin_B4_list = list(bin_B4)
+    bin_B4_list[7] = str(
+        lenPoundMessage_eightDigitBinary[eightDigitBinary_lengthPosition][binaryPosition])  # for B
+    bin_B4 = ''.join(bin_B4_list)
+    print("Post bin_B4[7] = " + str(bin_B4[7]))
+    B = int(bin_B4, 2)
+    print("Post B =  " + str(B))
+    return B
 # ==================================================
 # ==================================================
 # ==================================================
