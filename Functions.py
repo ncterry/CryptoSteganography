@@ -3,16 +3,16 @@ from tkinter import ttk
 from matplotlib import style
 from main import *
 from PIL import Image
+
+
 # Imported PIL Library from PIL import Image
 # ==================================================
 # ==================================================
 # ==================================================
 # Open an Image - getPixel.py
 def open_image(path, name):
-
     newImage = Image.open(path + name)
     return newImage
-
 
 
 # ==================================================
@@ -31,6 +31,7 @@ def create_image(i, j):
     image = Image.new("RGB", (i, j), "white")
     return image
 
+
 # ==================================================
 # ==================================================
 # ==================================================
@@ -48,11 +49,11 @@ def image_RGBconvert(img):
     print("img.format = \t", img.format)  # Current Photo = JPEG
     return img
 
+
 # ==================================================
 # ==================================================
 # ==================================================
 def print_pixel(x, y, img):
-
     #   The most common pixel format is the byte image, where this number is stored as an 8-bit integer
     #       giving a range of possible values from 0 to 255. Typically zero is taken to be black, and 255
     #       is taken to be white. Values in between make up the different shades of gray.
@@ -60,7 +61,9 @@ def print_pixel(x, y, img):
     import os, sys
     pix = img.load()
     print("Function print_pixel(x, y, img) = "
-          "\n\tpixel[" + str(x) + ", " + str(y) + "] = \t", pix[x,y])
+          "\n\tpixel[" + str(x) + ", " + str(y) + "] = \t", pix[x, y])
+
+
 # ==================================================
 # ==================================================
 # ==================================================
@@ -85,7 +88,74 @@ def convert_grayscale(image):
     width, height = image.size
 # ==================================================
 # ==================================================
+# ==================================================
+def getMessage():
 
+    unsecuredMessage = input("What message do you want to encrypt?")
+    return unsecuredMessage
+
+
+# ==================================================
+# ==================================================
+# ==================================================
+# remember this is the unencrypted message
+def turnMessageIntoBinary(message):
+    print("")
+    '''
+    This function works, but does not represent a char in 8 binary digits
+    Ex. Space   = 100000
+    Ex. A       = 1000001
+    
+    If we embed this, without 8 digits, we cannot distinguish
+    
+    '''
+    #print("Initial message = ")
+    #print(message)
+
+    #binMessage = ' '.join(format(ord(x), 'b') for x in message)
+    #print(binMessage)
+    #print("Length of binMessage = ")
+    #print(str(len(binMessage)))
+    #return binMessage
+    '''
+    What message do you want to encrypt?    nate is nate
+    Length of binMessage = 
+    93
+    
+    Print binarty in main:
+    1101110 1100001 1110100 1100101 100000 1101001 1110011 100000 1101110 1100001 1110100 1100101
+    
+    '''
+# ==================================================
+# ==================================================
+# ==================================================
+def convertBinarytoDisplay8digits(initialBin):
+    '''
+    This function turns each char into 8 binary digits
+    But we have a char in binary, in an array:
+
+    Nate is
+    ['01001110', '01100001', '01110100', '01100101', '00100000', '01101001', '01110011']
+    Length of xxx =
+    7
+    '''
+    secondBin = [bin(ord(ch))[2:].zfill(8) for ch in initialBin]
+    #print(secondBin)
+    #print("Length of xxx = ")
+    #print(str(len(secondBin)))
+    return secondBin
+    # ==================================================
+# ==================================================
+# ==================================================
+
+
+# ==================================================
+# ==================================================
+# ==================================================
+
+# ==================================================
+# ==================================================
+# ==================================================
 
 # ==================================================
 # ==================================================
