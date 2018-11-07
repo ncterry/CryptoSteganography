@@ -203,3 +203,118 @@ def changeANDconvertB(B, bin_B4, lenPoundMessage_eightDigitBinary, eightDigitBin
 # ==================================================
 # ==================================================
 # ==================================================
+def symmetricEncryptMessage(message):
+    # in Terminal:
+    # pip3 install Cryptography --> success
+    # installed Cryptography here for interpreter
+    from cryptography.fernet import Fernet
+
+    key = Fernet.generate_key()
+    cipher_suite = Fernet(key)
+    cipher_text = cipher_suite.encrypt(b"A really secret message. Not for prying eyes.")
+    plain_text = cipher_suite.decrypt(cipher_text)
+    #print("cipher_text = " + str(cipher_text))
+    #print(plain_text)
+
+# ==================================================
+# ==================================================
+from Crypto.Cipher import AES
+# ==================================================
+def pad(s):
+    '''
+        global key
+        key = b'Sixteen byte key' # he made this global
+
+        global message
+        message = "this is my super secret message"
+
+        from Crypto.Cipher import AES
+        global cipher
+        cipher = AES.new(key)
+        '''
+    # AES only takes 16's
+    # This pads with '{' since AES only takes inputs that are divisible by 16.
+    return s + ((16-len(s) % 16) * '{')
+# ==================================================
+# ==================================================
+# ==================================================
+def encrypt(plaintext):
+    # from Terminal:    $ pip3 install pycrypto     --> success
+    # place "pycrypto" through our interpreter
+    '''
+        global key
+        key = b'Sixteen byte key' # he made this global
+
+        global message
+        message = "this is my super secret message"
+
+        from Crypto.Cipher import AES
+        global cipher
+        cipher = AES.new(key)
+        '''
+    from globals import cipher
+    return cipher.encrypt(pad(plaintext))
+
+# ==================================================
+# ==================================================
+# ==================================================
+def decrypt(ciphertext):
+    '''
+        global key
+        key = b'Sixteen byte key' # he made this global
+
+        global message
+        message = "this is my super secret message"
+
+        from Crypto.Cipher import AES
+        global cipher
+        cipher = AES.new(key)
+        '''
+    from globals import cipher
+    dec = cipher.decrypt(ciphertext).decode('utf-8')
+    leng = dec.count('{')
+    return dec[:len(dec) - leng]
+
+# ==================================================
+# ==================================================
+# ==================================================
+def bytesTOstring(byteMessage):
+
+    # utf-8 is used here because it is a very common encoding, but you
+    # need to use the encoding your data is actually in.
+    print("\n\ninitial byteMessage: ", str(byteMessage))
+
+    #byteTOstring = byteMessage.decode("utf-8")
+    #byteTOstring = byteMessage.decode("ascii")
+    byteTOstring = byteMessage.decode("latin-1")
+
+
+    print("byteTOstring post decode: ", byteTOstring)
+    return bytesTOstring
+
+# ==================================================
+# ==================================================
+# ==================================================
+def stringTObinary(stringMessage):
+    print("stringMessage: ", stringMessage)
+    binaryMessage = convertBinarytoDisplay8digits(stringMessage)
+    print("binaryMessage: ", str(binaryMessage))
+
+    '''
+    Nate is great
+    ['01001110', '01100001', '01110100', '01100101', '00100000', '01101001', '01110011', '00100000', '01100111', '01110010', '01100101', '01100001', '01110100']
+        Length of eightDigitBinary = 
+        13
+    '''
+
+# ==================================================
+# ==================================================
+# ==================================================
+
+# ==================================================
+# ==================================================
+# ==================================================
+
+# ==================================================
+# ==================================================
+# ==================================================

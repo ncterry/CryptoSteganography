@@ -34,7 +34,7 @@ def embeddSimpleMessage():
 
     # ============================================
     # Display photo - not needed in the long term.
-    # img.show()
+    #img.show()
 
     # ============================================
     # We are sending the image to be converted to RGB format
@@ -189,13 +189,16 @@ def embeddSimpleMessage():
          
 
      '''
+
     eightDigitBinary_lengthPosition = 0  # length of lenPoundMessage_eightDigitBinary
     binaryPosition = 0  # =7 so we can do 8bits, 0-7
 
     from globals import workingPXLs
-    # Create new Image and a Pixel Map
+    # Create new, blank, Image and a Pixel Map
     newImage = create_image(width, height)
+
     pixels = newImage.load()
+
     # =================for y - start============================================
     for y in range(0, height):  # each pixel has coordinates
         row = ""
@@ -208,6 +211,7 @@ def embeddSimpleMessage():
             R = pixel[0]
             G = pixel[1]
             B = pixel[2]
+            #print("pixel is: " + str(pixel))
             # -----------
 
             # Convert the values to binary
@@ -226,6 +230,7 @@ def embeddSimpleMessage():
             bin_B2 = str(bin_B)
 
             # Cycle through to remove the b from the string.
+            # 0b10101010 --> 010101010
             for char in bin_R2:
                 bin_R3 = bin_R2.replace("b", "")
             for char in bin_G2:
@@ -235,6 +240,7 @@ def embeddSimpleMessage():
 
             # Note if the length is 9, then these were  given an extra 0 at the front
             # Remove the extra, meaningless 0
+            # 010101010 --> 10101010
             if len(bin_R3) == 9:
                 bin_R4 = bin_R3[1:]
             if len(bin_G3) == 9:
@@ -247,13 +253,6 @@ def embeddSimpleMessage():
 
 
 
-            seems like we are changing and embedding LSB pixels
-            but the blacks are changing, that is noticable
-            need to be careful on dark pixels
-
-
-
-
             # ===============if RGB - start=============================================
             # We do not want to change or acknowledge:
             #   White Pixels 255
@@ -261,8 +260,8 @@ def embeddSimpleMessage():
             #   Pixles 1 from White --> add 1 would make White
             # --------------Original works---------------------------
             if (R != 255 or G != 255 or B != 255) and \
-                    (R != 254 or G != 254 or B != 254) and \
-                    (R != 0 or G != 0 or B != 0):
+                    (R != 254 or G != 254 or B != 254):
+
                 '''    
                 # The original change....works
                 # Change the RBG values
@@ -277,33 +276,51 @@ def embeddSimpleMessage():
                 # ---------------------------
                 # Remember we are changing the last bit on R, G, B
                 # ---------------------------
-                if eightDigitBinary_lengthPosition < len(lenPoundMessage_eightDigitBinary):
+                # We are only changing the pixels, if we still have binary digits to embed.
+                # If our binary position reaches our total length, then we don't enter our IFs
+                # ---------------------------
+                # ---------------------------
+                # ---------------------------
+                if (eightDigitBinary_lengthPosition < len(lenPoundMessage_eightDigitBinary)):
+                    print("bin_R4 = " + str(bin_R4))
                     R = changeANDconvertR(R, bin_R4, lenPoundMessage_eightDigitBinary, eightDigitBinary_lengthPosition, binaryPosition)
                     print("binaryPosition spot 1 = " + str(binaryPosition))
                     binaryPosition += 1
+
+                    #R = 0 # to make pixel black to display embed
                     if binaryPosition == 8: # Can't do 8
                         eightDigitBinary_lengthPosition += 1
                         binaryPosition = 0
-
                     # ---------------------------
-                if eightDigitBinary_lengthPosition < len(lenPoundMessage_eightDigitBinary):
+                    # ---------------------------
+                if (eightDigitBinary_lengthPosition < len(lenPoundMessage_eightDigitBinary)):
                     G = changeANDconvertG(G, bin_G4, lenPoundMessage_eightDigitBinary, eightDigitBinary_lengthPosition, binaryPosition)
                     print("binaryPosition spot 2 = " + str(binaryPosition))
                     binaryPosition += 1
+
+                    #G = 0 # to make pixel black to display embed
                     if binaryPosition == 8: # Can't do 8
                         eightDigitBinary_lengthPosition += 1
                         binaryPosition = 0
-
                     # ---------------------------
-                if eightDigitBinary_lengthPosition < len(lenPoundMessage_eightDigitBinary):
+                    # ---------------------------
+                if (eightDigitBinary_lengthPosition < len(lenPoundMessage_eightDigitBinary)):
                     B = changeANDconvertB(B, bin_B4, lenPoundMessage_eightDigitBinary, eightDigitBinary_lengthPosition, binaryPosition)
                     print("binaryPosition spot 3 = " + str(binaryPosition))
                     binaryPosition += 1
 
+                    #B = 0 # to make pixel black to display embed
+
                     if binaryPosition == 8: # Can't do 8
                         eightDigitBinary_lengthPosition += 1
                         binaryPosition = 0
+                # ---------------------------
+                # ---------------------------
+                # ---------------------------
             # --------------Original works---------------------------
+                # We now place our RBG values in our newly created blank image.
+                # If we have not made a change based on our message embed, then,
+                #       these R,B,G values will be the direct copy that was pulled from the initial photo.
                 pixels[x, y] = (int(R), int(G), int(B)) # after the RBG change
 
                 # This prints too many pixels for pycharm.

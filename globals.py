@@ -21,3 +21,15 @@ unsecuredMessage = ""
 global workingPXLs
 workingPXLs = 0
 
+
+# =========for the AES encryption ====start=======
+global key
+key = b'Sixteen byte key' # he made this global
+
+global message
+message = "this is my super secret message"
+
+from Crypto.Cipher import AES
+global cipher
+cipher = AES.new(key)
+# =========for the AES encryption ====end=======

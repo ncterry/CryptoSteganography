@@ -43,11 +43,59 @@ if __name__ == "__main__":
 
 
 
-    img2 = embeddSimpleMessage()
+    #img2 = embeddSimpleMessage()
     print("make it here???")
-    img2.show()
+    #img2.show()
+
+    # this encrypts but is symmetric
+    symmetricEncryptMessage("xxx")
 
 
+
+
+    '''
+    global key
+    key = b'Sixteen byte key' # he made this global
+    
+    global message
+    message = "this is my super secret message"
+    
+    from Crypto.Cipher import AES
+    global cipher
+    cipher = AES.new(key)
+    '''
+    from globals import message
+    print("\n\nMessage: ", message)
+    encrypted = encrypt(message)
+    bTOs = bytesTOstring(encrypted)
+    print("bTOs: ", str(bTOs))
+    decrypted = decrypt(encrypted)
+    print("Encrypted: ", encrypted)
+    print("Decrypted: ", decrypted)
+
+
+    we are mixed in here
+    we have our functions + globals that allow us to do a legit AES encrypt/decrypt
+    but our encrypted byte is in a format that i cant convert it to string
+    we currently convert from string to binary so we can then embed
+    but again,
+    we cannot convert that unique AES byte to string
+
+    bbb = b'gAAAAABb4nSALA0pvaISSbPzcQ7Tv6YIafMje7wvqeWGfq9SsakmuwqncNvraR8c5bdfChc9BqPjJsB35dXdzr7IxY-hvsi2-XwmWnoe8thPQnaLB3_QTTJpGZGBwl3XLl3-jb8lBp46'
+    bytesTOstring(bbb)
+    '''
+    initial byteMessage:  b'gAAAAABb4nSALA0pvaISSbPzcQ7Tv6YIafMje7wvqeWGfq9SsakmuwqncNvraR8c5bdfChc9BqPjJsB35dXdzr7IxY-hvsi2-XwmWnoe8thPQnaLB3_QTTJpGZGBwl3XLl3-jb8lBp46'
+    byteTOstring post decode:  gAAAAABb4nSALA0pvaISSbPzcQ7Tv6YIafMje7wvqeWGfq9SsakmuwqncNvraR8c5bdfChc9BqPjJsB35dXdzr7IxY-hvsi2-XwmWnoe8thPQnaLB3_QTTJpGZGBwl3XLl3-jb8lBp46
+    '''
+
+    #we have AES encryption and decryption in functions
+
+
+    returnedBinary = stringTObinary("Nate is great")
+    '''
+    stringMessage:  Nate is great
+    binaryMessage:  ['01001110', '01100001', '01110100', '01100101', '00100000', '01101001', '01110011', '00100000', '01100111', '01110010', '01100101', '01100001', '01110100']
+    '''
 
             # ===============if RGB - end=================================
         # =============for x - end============================================
