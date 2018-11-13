@@ -1,7 +1,7 @@
 # This is our global list.
 # While the program is running this will be used with our study data
 global global_photoName
-global_photoName = "Fox_original.jpg"
+global_photoName = "fox_original.jpg"
 
 global globalMain_Directory
 globalMain_Directory = "/Users/nct/Dropbox/ComputerScience/PycharmProjects/CryptoSteganography"
@@ -20,6 +20,9 @@ unsecuredMessage = ""
 
 global workingPXLs
 workingPXLs = 0
+
+global joinJoinJoin
+joinJoinJoin = ""
 
 
 # =========for the AES encryption ====start=======

@@ -98,34 +98,7 @@ def getMessage():
 # ==================================================
 # ==================================================
 # ==================================================
-# remember this is the unencrypted message
-def turnMessageIntoBinary(message):
-    print("")
-    '''
-    This function works, but does not represent a char in 8 binary digits
-    Ex. Space   = 100000
-    Ex. A       = 1000001
-    
-    If we embed this, without 8 digits, we cannot distinguish
-    
-    '''
-    #print("Initial message = ")
-    #print(message)
 
-    #binMessage = ' '.join(format(ord(x), 'b') for x in message)
-    #print(binMessage)
-    #print("Length of binMessage = ")
-    #print(str(len(binMessage)))
-    #return binMessage
-    '''
-    What message do you want to encrypt?    nate is nate
-    Length of binMessage = 
-    93
-    
-    Print binarty in main:
-    1101110 1100001 1110100 1100101 100000 1101001 1110011 100000 1101110 1100001 1110100 1100101
-    
-    '''
 # ==================================================
 # ==================================================
 # ==================================================
@@ -285,8 +258,8 @@ def bytesTOstring(byteMessage):
     print("\n\ninitial byteMessage: ", str(byteMessage))
 
     #byteTOstring = byteMessage.decode("utf-8")
-    #byteTOstring = byteMessage.decode("ascii")
-    byteTOstring = byteMessage.decode("latin-1")
+    byteTOstring = byteMessage.decode("ASCII")
+    #byteTOstring = byteMessage.decode("latin-1")
 
 
     print("byteTOstring post decode: ", byteTOstring)
@@ -297,8 +270,10 @@ def bytesTOstring(byteMessage):
 # ==================================================
 def stringTObinary(stringMessage):
     print("stringMessage: ", stringMessage)
+
     binaryMessage = convertBinarytoDisplay8digits(stringMessage)
     print("binaryMessage: ", str(binaryMessage))
+
 
     '''
     Nate is great
@@ -306,10 +281,22 @@ def stringTObinary(stringMessage):
         Length of eightDigitBinary = 
         13
     '''
+    return binaryMessage
 
 # ==================================================
 # ==================================================
 # ==================================================
+def byteTObit(byteMessage):
+    from bitstring import BitArray
+    print("\n\n\n byteMessage in byteTObit = ")
+    print(byteMessage, "\n\n")
+
+    bTOs = bytesTOstring(byteMessage)
+
+
+    input_str = '0xff'
+    c = BitArray(hex=input_str)
+    c.bin
 
 # ==================================================
 # ==================================================

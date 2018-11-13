@@ -142,7 +142,6 @@ def embeddSimpleMessage():
         print(lenPoundMessage_eightDigitBinary[x])
 
 
-
     print("\n\nlenPoundMessage_eightDigitBinary[0][0] = ")
     print(lenPoundMessage_eightDigitBinary[0][0])
 

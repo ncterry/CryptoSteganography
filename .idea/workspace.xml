@@ -4,8 +4,10 @@
     <list default="true" id="5b97d407-d2fe-48c2-a7da-b70f5d3be6ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PresentationStego.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/PresentationStego.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StegoPhotos/changed_image.png" beforeDir="false" afterPath="$PROJECT_DIR$/StegoPhotos/changed_image.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/embeddSimpleMessage.py" beforeDir="false" afterPath="$PROJECT_DIR$/embeddSimpleMessage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/globals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/originalPixels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/originalPixels.txt" afterDir="false" />
     </list>
@@ -15,63 +17,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/../../../tkinter/NCTStudyApp/NCTStudyApp.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="3255">
-                    <caret line="222" column="56" selection-start-line="222" selection-start-column="56" selection-end-line="222" selection-end-column="56" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/xgetPixel.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="3735">
-                    <caret line="249" column="63" selection-start-line="249" selection-start-column="63" selection-end-line="249" selection-end-column="63" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/initialWorkingReduction.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="398">
-                    <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
-                    <folding>
-                      <element signature="e#0#18#0" expanded="true" />
-                      <marker date="1541460136594" expanded="true" signature="1003:1004" ph="..." />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1834815419">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.4" value="5" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
           <entry key="png" value="1" />
-          <entry key="py" value="26" />
+          <entry key="py" value="29" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -80,21 +42,21 @@
           <entry key="Image" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="26" />
+          <entry key="Python" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="28" />
           <entry key="md" value="88" />
-          <entry key="py" value="8741" />
+          <entry key="py" value="10885" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="88" />
           <entry key="PLAIN_TEXT" value="28" />
-          <entry key="Python" value="8741" />
+          <entry key="Python" value="10885" />
         </counts>
       </usages-collector>
     </session>
@@ -104,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+            <state relative-caret-position="1168">
+              <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
               <folding>
                 <element signature="e#306#323#0" expanded="true" />
               </folding>
@@ -116,17 +78,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/globals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="321">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/embeddSimpleMessage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="251" column="45" selection-start-line="251" selection-start-column="45" selection-end-line="251" selection-end-column="45" />
+            <state relative-caret-position="107">
+              <caret line="92" column="12" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="12" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -155,20 +117,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="190" column="39" selection-start-line="190" selection-start-column="39" selection-end-line="190" selection-end-column="39" />
+            <state relative-caret-position="595">
+              <caret line="245" selection-start-line="245" selection-end-line="248" selection-end-column="32" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1541520434030" expanded="true" signature="3310:3411" ph="..." />
-                <marker date="1541520434030" expanded="true" signature="3875:3876" ph="..." />
-                <marker date="1541520434030" expanded="true" signature="4806:4956" ph="..." />
-                <marker date="1541520434030" expanded="true" signature="5257:6210" ph="..." />
-                <marker date="1541520434030" expanded="true" signature="6208:6210" ph="..." />
-                <marker date="1541520434030" expanded="true" signature="6485:7129" ph="..." />
-                <marker date="1541520434030" expanded="true" signature="7404:8057" ph="..." />
+                <marker date="1542122242111" expanded="true" signature="11146:11368" ph="..." />
               </folding>
             </state>
           </provider>
@@ -212,6 +168,10 @@
       <find>popup = tk.T</find>
       <find>photoName_E</find>
       <find>lambd</find>
+      <find>stringtobin</find>
+      <find>Print New</find>
+      <find>return2</find>
+      <find>###</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,17 +188,17 @@
         <option value="$PROJECT_DIR$/1BlackAndWhite_Reduction.py" />
         <option value="$PROJECT_DIR$/initialWorkingPixelReduction.py" />
         <option value="$PROJECT_DIR$/initialWorkingReduction.py" />
-        <option value="$PROJECT_DIR$/globals.py" />
         <option value="$PROJECT_DIR$/Functions.py" />
-        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/globals.py" />
         <option value="$PROJECT_DIR$/embeddSimpleMessage.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="461" />
+    <option name="x" value="81" />
     <option name="y" value="23" />
-    <option name="width" value="1221" />
+    <option name="width" value="1483" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -249,7 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,10 +220,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -378,15 +339,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="461" y="23" width="1221" height="1027" extended-state="0" />
-    <editor active="true" />
+    <frame x="81" y="23" width="1483" height="1027" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15833333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12995896" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23636363" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.7593583" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -423,10 +383,24 @@
     <entry file="file://$PROJECT_DIR$/originalPixels.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/globals.py">
+    <entry file="file://$PROJECT_DIR$/../../../tkinter/NCTStudyApp/NCTStudyApp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="3255">
+          <caret line="222" column="56" selection-start-line="222" selection-start-column="56" selection-end-line="222" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xgetPixel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3735">
+          <caret line="249" column="63" selection-start-line="249" selection-start-column="63" selection-end-line="249" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/initialWorkingReduction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -467,52 +441,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../tkinter/NCTStudyApp/NCTStudyApp.py">
+    <entry file="file://$PROJECT_DIR$/globals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3255">
-          <caret line="222" column="56" selection-start-line="222" selection-start-column="56" selection-end-line="222" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xgetPixel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3735">
-          <caret line="249" column="63" selection-start-line="249" selection-start-column="63" selection-end-line="249" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/initialWorkingReduction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="142" column="47" selection-start-line="142" selection-start-column="47" selection-end-line="142" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1541460136594" expanded="true" signature="1003:1004" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="190" column="39" selection-start-line="190" selection-start-column="39" selection-end-line="190" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1541520434030" expanded="true" signature="3310:3411" ph="..." />
-            <marker date="1541520434030" expanded="true" signature="3875:3876" ph="..." />
-            <marker date="1541520434030" expanded="true" signature="4806:4956" ph="..." />
-            <marker date="1541520434030" expanded="true" signature="5257:6210" ph="..." />
-            <marker date="1541520434030" expanded="true" signature="6208:6210" ph="..." />
-            <marker date="1541520434030" expanded="true" signature="6485:7129" ph="..." />
-            <marker date="1541520434030" expanded="true" signature="7404:8057" ph="..." />
-          </folding>
+        <state relative-caret-position="321">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        <state relative-caret-position="1168">
+          <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
           <folding>
             <element signature="e#306#323#0" expanded="true" />
           </folding>
@@ -521,10 +460,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/embeddSimpleMessage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="251" column="45" selection-start-line="251" selection-start-column="45" selection-end-line="251" selection-end-column="45" />
+        <state relative-caret-position="107">
+          <caret line="92" column="12" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="12" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="245" selection-start-line="245" selection-end-line="248" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <marker date="1542122242111" expanded="true" signature="11146:11368" ph="..." />
           </folding>
         </state>
       </provider>
